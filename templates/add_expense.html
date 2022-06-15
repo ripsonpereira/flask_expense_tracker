@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+
+
+<!-- partial:index.partial.html -->
+<div class="login-form">
+    <form action="/add_expense" method='POST'>
+      <h1>add Expense</h1>
+      <div class="content">
+        <div class="input-field">
+          <!-- <input type="email" placeholder="Expense" autocomplete="nope" name="expense"> -->
+          <!-- <input list="expense" placeholder="Expense" name="expense" id="expense"> -->
+
+          <select id="expense" name="expense">
+            <option value="food">food</option>
+            <option value="health">health</option>
+            <option value="rent">rent</option>
+            <option value="others">Others</option
+          >
+            </select>
+        </div>
+        
+        <div class="input-field">
+          <input type="number" placeholder="Amount"  name="amount">
+        </div>
+      
+      </div>
+      <div class="action">
+       
+        <button type="submit">Add Expense</button>
+      </div>
+    </form>
+  </div>
+  <!-- partial -->
+  
+
+{% endblock %}

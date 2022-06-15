@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block container %}
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'><link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+
+
+<!-- partial:index.partial.html -->
+<div class="login-form">
+    <form action="/add_income" method="post">
+      <h1>Add Income</h1>
+      <div class="content">
+        <div class="input-field">
+          <input type="text" placeholder="Source" autocomplete="nope" name="source">
+        </div>
+        <div class="input-field">
+          <input type="number" placeholder="Amount"  name="amount">
+        </div>
+      
+      </div>
+      <div class="action">
+       
+        <button type="submit">ADD</button>
+      </div>
+    </form>
+  </div>
+  <!-- partial -->
+  
+
+{% endblock %}
